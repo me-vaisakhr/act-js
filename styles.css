@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1117;
+  color: #e1e4e8;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.component {
+  background: #1c1f26;
+  border: 1px solid #2d333b;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.component h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #c9d1d9;
+  border-bottom: 1px solid #2d333b;
+  padding-bottom: 0.5rem;
+}
+
+/* Timer */
+.timer-display {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  color: #58a6ff;
+  margin: 1rem 0;
+}
+
+/* Counter */
+.count-display {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #58a6ff;
+  margin: 1rem 0;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: #58a6ff;
+  color: #0f1117;
+}
+
+.btn-success {
+  background: #3fb950;
+  color: #0f1117;
+}
+
+.btn-danger {
+  background: #f85149;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #2d333b;
+  color: #c9d1d9;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #2d333b;
+  border-radius: 8px;
+  background: #0f1117;
+  color: #e1e4e8;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.error {
+  color: #f85149;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.success {
+  color: #3fb950;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.contacts-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contacts-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #2d333b;
+  font-size: 0.95rem;
+}
+
+.contacts-list h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #8b949e;
+}
+
+/* Todo */
+.todo-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input-row input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #2d333b;
+  border-radius: 8px;
+  background: #0f1117;
+  color: #e1e4e8;
+  font-size: 1rem;
+}
+
+.todo-input-row input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.btn-filter {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #2d333b;
+  border-radius: 6px;
+  background: transparent;
+  color: #8b949e;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-filter:hover {
+  color: #c9d1d9;
+  border-color: #58a6ff;
+}
+
+.btn-filter.active {
+  background: #58a6ff;
+  color: #0f1117;
+  border-color: #58a6ff;
+  font-weight: 600;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #2d333b;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #484f58;
+}
+
+.todo-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #2d333b;
+  border-radius: 6px;
+  background: transparent;
+  color: #3fb950;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.todo-checkbox:hover {
+  border-color: #58a6ff;
+}
+
+.todo-checkbox.checked {
+  background: #1a3a2a;
+  border-color: #3fb950;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.todo-delete {
+  background: transparent;
+  border: none;
+  color: #484f58;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.todo-delete:hover {
+  color: #f85149;
+  background: rgba(248, 81, 73, 0.1);
+}
+
+.todo-empty {
+  padding: 1rem 0;
+  text-align: center;
+  color: #484f58;
+  font-size: 0.9rem;
+}
+
+.btn-small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Badges — show which state approach a component uses */
+.badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  background: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+}
+
+.badge-global {
+  background: rgba(210, 153, 34, 0.15);
+  color: #d29922;
+}
+
+/* Hint text — shows how state is accessible */
+.state-hint {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(139, 148, 158, 0.08);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #484f58;
+  font-family: "Courier New", monospace;
+}
