@@ -35,8 +35,11 @@
 import { TodoInput } from "./input.js";
 import { TodoFilter } from "./filter.js";
 import { TodoList } from "./list.js";
+import todoSheet from "./todo.css" with { type: "css" };
 
 export function TodoComponent(app) {
+  app.criticalStylesheet(todoSheet);
+
   // Create the parent scope — owns the shared todo data
   const scope = app.createScope("todo");
 

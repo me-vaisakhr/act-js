@@ -35,9 +35,13 @@ import { TimerComponent } from "./components/timer.js";
 import { CounterComponent } from "./components/counter.js";
 import { PhoneFormComponent } from "./components/phone-form.js";
 import { TodoComponent } from "./components/todos/todo.js";
+import appSheet from "./app.css" with { type: "css" };
 
 // Create the app instance attached to #root
 const app = createApp(document.getElementById("root"));
+
+// Register shared layout CSS as critical (applied at mount time via adoptedStyleSheets)
+app.criticalStylesheet(appSheet);
 
 // ─────────────────────────────────────────────────────────────
 // GLOBAL STATE

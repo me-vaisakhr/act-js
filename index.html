@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Act</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Prevents white flash before JS runs — body background only -->
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      body { background: #0f1117; color: #e1e4e8; }
+    </style>
+
+    <!-- Non-critical CSS — async (interaction states, dynamic content) -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
   </head>
   <body>
     <div id="root"></div>
