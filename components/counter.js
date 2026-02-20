@@ -33,7 +33,10 @@
  *
  *   But since we're demonstrating global state, we use app.setState() directly.
  */
+import counterSheet from "./counter.css" with { type: "css" };
+
 export function CounterComponent(app) {
+  app.criticalStylesheet(counterSheet);
   // ── Initial State (Global) ──
   // This value is stored in the shared globalState object.
   app.setState("count", 0);

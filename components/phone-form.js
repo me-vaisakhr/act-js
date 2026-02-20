@@ -33,7 +33,10 @@
  *     // Any component can read the contacts list:
  *     const contacts = app.getState("phone_contacts");
  */
+import phoneFormSheet from "./phone-form.css" with { type: "css" };
+
 export function PhoneFormComponent(app) {
+  app.criticalStylesheet(phoneFormSheet);
   // ── Initial State (Global) ──
   // All keys are manually prefixed with "phone_" to avoid collisions.
   app.setState("phone_input", "");

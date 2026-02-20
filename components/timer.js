@@ -22,7 +22,10 @@
  *   If another component DID need the timer's value, it could still access it:
  *     const timerSeconds = app.getScope("timer").getState("seconds");
  */
+import timerSheet from "./timer.css" with { type: "css" };
+
 export function TimerComponent(app) {
+  app.criticalStylesheet(timerSheet);
   // Create a private scope for this component
   const scope = app.createScope("timer");
 
